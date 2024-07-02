@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Venkatesh's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-section">
+            <h1>Greetings, wanderer! You've found the nexus of my profile.</h1>
+            <nav>
+                <button onclick="showSection('home')">Home</button>
+                <button onclick="showSection('about')">About</button>
+                <button onclick="showSection('portfolio')">Portfolio</button>
+                <button onclick="showSection('contact')">Contact</button>
+            </nav>
+        </div>
+        <div class="image-section">
+            <img src="file-CtDY9lh4gUEbS8rhUA6AUawP" alt="Left Image" class="left-image">
+            <img src="file-DYeEIPykC3fPOcpVUiJw5c71" alt="Right Image" class="right-image">
+        </div>
+        <div id="home" class="content-section">
+            <h2>Home</h2>
+            <p>Welcome to my personal portfolio website!</p>
+        </div>
+        <div id="about" class="content-section" style="display: none;">
+            <h2>About Me</h2>
+            <p>Name: Aditya Venkatesh</p>
+            <p>Experience: Software Developer</p>
+        </div>
+        <div id="portfolio" class="content-section" style="display: none;">
+            <h2>Portfolio</h2>
+            <p>Check out my projects below:</p>
+            <ul>
+                <li>Project 1: Description</li>
+                <li>Project 2: Description</li>
+            </ul>
+        </div>
+        <div id="contact" class="content-section" style="display: none;">
+            <h2>Contact</h2>
+            <p>Email: example@example.com</p>
+            <p>Phone: 123-456-7890</p>
+        </div>
+    </div>
+    <script>
+        function showSection(section) {
+            document.querySelectorAll('.content-section').forEach(el => el.style.display = 'none');
+            document.getElementById(section).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
